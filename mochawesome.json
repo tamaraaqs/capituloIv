@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-15T01:56:19.744Z",
+    "end": "2021-11-15T01:56:42.404Z",
+    "duration": 22660,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "86060a18-8664-4572-85c1-a0643a10de84",
+      "title": "",
+      "fullFile": "cypress/integration/autenticacao.spec.js",
+      "file": "cypress/integration/autenticacao.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d28fffbb-ccb0-41ec-b6e6-7f33e2fe5abb",
+          "title": "Validando funcionalidade cadastro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando eu inserir o email e clicar em create an accout, então deve abrir formulario para preenchimento e ao clicar em register a conta deve ser criada com sucesso.",
+              "fullTitle": "Validando funcionalidade cadastro Quando eu inserir o email e clicar em create an accout, então deve abrir formulario para preenchimento e ao clicar em register a conta deve ser criada com sucesso.",
+              "timedOut": null,
+              "duration": 16050,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php?controller=authentication&back=my-account');\ncy.get('input[id=email_create]').should('be.visible').type(chance.email());\ncy.get('button[name=SubmitCreate]').should('be.visible').click();\ncy.get('input[type=radio]').check('1');\ncy.get('input[id=customer_firstname]').should('be.visible').type(chance.first());\ncy.get('input[id=customer_lastname]').should('be.visible').type(chance.last());\ncy.get('input[id=email]').should('be.visible');\ncy.get('input[id=passwd]').should('be.visible').type(chance.email());\ncy.get('select[id=days]').select('1');\ncy.get('select#months').select('May');\ncy.get('select#years').select('2020');\ncy.get('#firstname').should('be.visible').type(chance.first());\ncy.get('#lastname').should('be.visible').type(chance.last());\ncy.get('#address1').should('be.visible').type(chance.address());\ncy.get('input[id=city]').should('be.visible').type(chance.address());\ncy.get('#id_state').select('Hawaii');\ncy.get('#postcode').should('be.visible').type('00000');\ncy.get('#id_country').type('Alabama');\ncy.get('#phone_mobile').should('be.visible').type(chance.phone());\ncy.get('button[id=submitAccount]').click();\ncy.get('.page-heading').should('be.visible');\ncy.contains('Welcome to your account. Here you can manage all of your personal information and orders');",
+              "err": {},
+              "uuid": "3bbceb2c-3c0d-4f9e-bed7-7923f9a8fc47",
+              "parentUUID": "d28fffbb-ccb0-41ec-b6e6-7f33e2fe5abb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3bbceb2c-3c0d-4f9e-bed7-7923f9a8fc47"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16050,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overWrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
